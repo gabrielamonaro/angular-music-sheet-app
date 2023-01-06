@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
-
+import {AnswerCheckerService} from '../../service/answer-checker.service'
 
 @Component({
   selector: 'app-keyboard',
@@ -11,10 +10,8 @@ export class KeyboardComponent implements OnInit {
   @Input() height:string=''
   @Input() valuePic:string=''
 
-  acertos:number = 0;
-
   notes:string[] = ['C','D','E','F','G','A','B']
-  constructor() { }
+  constructor(private checker: AnswerCheckerService) { }
 
   ngOnInit(): void {
     const listaTeclas = document.querySelector('#lista-teclas');
@@ -24,18 +21,11 @@ export class KeyboardComponent implements OnInit {
     let newHeight = Number(value)
     newHeight =  0.6*newHeight
     this.height = newHeight+'px';
-
-
   }
 
-  Check(note:string){
-  
-    this.valuePic = this.valuePic.substring(0, 1)
-  
-    if (note == this.valuePic)
-    {
-      this.acertos = this.acertos + 1;
-    }
+  Check(note:string, valuePic:string){
+    this.checker.check(note, this.valuePic)
   }
+
 
 }

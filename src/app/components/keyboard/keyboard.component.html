@@ -1,7 +1,7 @@
 <div class="keyboard"  valuePic="">
     
     <ul class="teclas" id="lista-teclas" >
-        <li class="tecla" (click)="Check(note)" [ngStyle]="{'height':height}" *ngFor="let note of notes"> <input  id="{{note}}" type="button"></li>
+        <li class="tecla" (click)="Check(note, valuePic)" [ngStyle]="{'height':height}" *ngFor="let note of notes"> <input  id="{{note}}" type="button"></li>
 
     </ul>
     

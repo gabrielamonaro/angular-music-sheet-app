@@ -5,13 +5,26 @@ import { Injectable } from '@angular/core';
 })
 export class AnswerCheckerService {
 
-  constructor() { }
+  acertos:number = 0;
 
-  check(nota:string)
-  {
-    if(nota)
+  constructor( ) { }
+
+    check(nota:string, valuePic:string)
     {
-
+      valuePic = valuePic.substring(0, 1)
+    
+      if (nota == valuePic)
+      {
+        this.acertos++
+        console.log(this.acertos)
+      }
+      
     }
-  }
+    
+
+    getAcertos(){
+      return this.acertos;
+    }
+
+
 }

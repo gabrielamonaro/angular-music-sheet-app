@@ -9,9 +9,9 @@
     </div>
 
     <div class="container-keyboard">
-        <app-keyboard valuePic="{{note}}"></app-keyboard>
+        <app-keyboard (click)="newPic()" valuePic="{{note}}"></app-keyboard>
     </div>
     <div class="container-points">
-        <app-points></app-points>
+        <app-points pontos="{{acertos}}"></app-points>
     </div>
 </main>
