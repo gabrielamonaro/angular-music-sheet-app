@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class BtnComponent implements OnInit {
   @Input() text:string =''
+
   constructor() { }
 
   ngOnInit(): void {

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import {RandomnessGeneratorService} from '../../service/randomness-generator.service'
 
 @Component({
   selector: 'app-main',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-
-  constructor() { }
+  @Input() note:string = ""
+  constructor(private random: RandomnessGeneratorService) { }
 
   ngOnInit(): void {
+    this.note = this.random.makeItRandom();
   }
 
 }

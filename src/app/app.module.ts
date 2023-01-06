@@ -12,6 +12,7 @@ import { TitleComponent } from './components/title/title.component';
 import { PointsComponent } from './components/points/points.component';
 import { KeyboardComponent } from './components/keyboard/keyboard.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
