@@ -7,8 +7,11 @@ export class AnswerCheckerService {
 
   constructor() { }
 
-  check()
+  check(nota:string)
   {
-    
+    if(nota)
+    {
+
+    }
   }
 }

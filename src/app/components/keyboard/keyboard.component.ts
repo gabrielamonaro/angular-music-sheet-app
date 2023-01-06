@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-keyboard',
   templateUrl: './keyboard.component.html',
@@ -7,7 +9,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class KeyboardComponent implements OnInit {
   @Input() height:string=''
+  @Input() valuePic:string=''
 
+  acertos:number = 0;
+
+  notes:string[] = ['C','D','E','F','G','A','B']
   constructor() { }
 
   ngOnInit(): void {
@@ -18,5 +24,18 @@ export class KeyboardComponent implements OnInit {
     let newHeight = Number(value)
     newHeight =  0.6*newHeight
     this.height = newHeight+'px';
+
+
   }
+
+  Check(note:string){
+  
+    this.valuePic = this.valuePic.substring(0, 1)
+  
+    if (note == this.valuePic)
+    {
+      this.acertos = this.acertos + 1;
+    }
+  }
+
 }
