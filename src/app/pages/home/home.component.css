@@ -1,4 +1,32 @@
 main{
-    background: linear-gradient(white  ,  #C5DEFA 25% ) ;
+    background-image: url('../../../assets/img/background-home.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    /* background: linear-gradient(white  ,  #C5DEFA 25% ) ; */
 }
 
+.container-title{
+    margin-top: 10%;
+}
+
+.container-card{
+    margin-bottom: 10%;
+}
+
+
+@media screen and (min-width: 800px) {
+    .container-title{
+        margin: 5%;
+        margin: 0 auto;
+    }
+
+    .container-card{
+        margin-bottom: 0;
+    }
+}
