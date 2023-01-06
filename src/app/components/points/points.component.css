@@ -1,0 +1,13 @@
+.container{
+    width: 90%;
+    margin:  auto  ;
+    margin-top: 10px;
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 18px;
+    border-radius: 15px;
+    background-color: #E1F0F4;
+    color: #4D6D72;
+    font-weight: bold;
+}

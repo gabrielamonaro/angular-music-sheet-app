@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+
+}
+
+button{
+    width: 90%;
+    color: #FEFEFF;
+    background-color: #353739;
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px 1px #353739f8;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #353739f8;
+    box-shadow: none;
+
+}
+
+button:active{
+    position: relative;
+    top: 1px;
+}

@@ -1,0 +1,10 @@
+.title{
+    display: flex;
+    text-align: left;
+}
+
+h1{
+    padding: 20px;
+   
+    font-weight: bold;
+}
