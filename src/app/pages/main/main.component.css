@@ -10,3 +10,7 @@ main{
 .container-points{
     padding-bottom: 10%;
 }
+
+app-keyboard{
+    border: 1px solid red;
+}

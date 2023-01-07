@@ -25,8 +25,4 @@ export class MainComponent implements OnInit, OnChanges {
     this.note = this.random.makeItRandom();
     this.acertos = this.checker.getAcertos();
   }
-
-  // Check(nota:string){
-  //   this.checker.check(nota);
-  // }
 }
