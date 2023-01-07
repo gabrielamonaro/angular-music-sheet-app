@@ -26,5 +26,10 @@ export class AnswerCheckerService {
       return this.acertos;
     }
 
+    setAcertos(){
+      this.acertos = 0;
+      return this.acertos;
+    }
+
 
 }

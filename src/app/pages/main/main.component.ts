@@ -20,6 +20,7 @@ export class MainComponent implements OnInit, OnChanges {
 
   ngOnInit(): void {
     this.newPic()
+    this.checker.setAcertos();
   }
 
   ngOnChanges(): void{

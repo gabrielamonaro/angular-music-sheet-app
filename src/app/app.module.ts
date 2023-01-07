@@ -11,6 +11,7 @@ import { CardComponent } from './components/card/card.component';
 import { TitleComponent } from './components/title/title.component';
 import { PointsComponent } from './components/points/points.component';
 import { KeyboardComponent } from './components/keyboard/keyboard.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { KeyboardComponent } from './components/keyboard/keyboard.component';
     CardComponent,
     TitleComponent,
     PointsComponent,
-    KeyboardComponent
+    KeyboardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
