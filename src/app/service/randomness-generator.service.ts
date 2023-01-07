@@ -28,7 +28,6 @@ export class RandomnessGeneratorService {
 
   getKeyboardUrl(){
     const url = "url('../../../assets/img/nivel" + this.nivel + "/keyboard.png')"
-    console.log(url)
     return url
     
   }
