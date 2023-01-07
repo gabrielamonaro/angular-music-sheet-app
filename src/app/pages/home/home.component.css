@@ -15,9 +15,15 @@ main{
     margin-top: 5%;
 }
 
+.container-botoes{
+    margin-top: 10px;
+    padding-bottom: 25px;
+}
+
 
 @media screen and (min-width: 800px) {
     .container-title{
+        margin-top: 10%;
         margin: 5%;
         margin: 0 auto;
     }

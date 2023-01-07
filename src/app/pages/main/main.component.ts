@@ -12,7 +12,10 @@ export class MainComponent implements OnInit, OnChanges {
   @Input() note:string = ""
   @Input() acertos:number = 0;
   qtde_restante:number = 10;
-  constructor(
+  @Input() keyboard:string = ""
+  @Input() nivel:string=''
+  
+ constructor(
     private random: RandomnessGeneratorService, 
     private checker:AnswerCheckerService,
     private navegador: Router
@@ -21,6 +24,7 @@ export class MainComponent implements OnInit, OnChanges {
   ngOnInit(): void {
     this.newPic()
     this.checker.setAcertos();
+    this.keyboard = this.random.getKeyboardUrl();
   }
 
   ngOnChanges(): void{
@@ -28,8 +32,9 @@ export class MainComponent implements OnInit, OnChanges {
   }
 
   newPic()
-  { if(this.qtde_restante>1)
+  { if(this.qtde_restante>0)
     {
+      this.nivel = this.random.getNivel();
       this.note = this.random.makeItRandom();
       this.acertos = this.checker.getAcertos();
       this.qtde_restante--;

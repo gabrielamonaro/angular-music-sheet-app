@@ -16,7 +16,7 @@
     border: 2px solid black;
     border-radius: 15px;
     display: flex;
-    background-image: url('../../../assets/img/keyboard.png');
+    /* background-image: url('../../../assets/img/nivel2/keyboard.png'); */
     width: 100%;
     max-width: 400px;
     background-repeat: no-repeat;

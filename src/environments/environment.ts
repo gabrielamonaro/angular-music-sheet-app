@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  notes: ['C','D','E','F','G','A','B','CC','DD','EE','FF','GG'],
+  notes: ['C','D','E','F','G','A','B','C-higher','D-higher','E-higher','F-higher','G-higher'],
   production: false
 };
 

@@ -9,6 +9,7 @@ import {AnswerCheckerService} from '../../service/answer-checker.service'
 export class KeyboardComponent implements OnInit {
   @Input() height:string=''
   @Input() valuePic:string=''
+  @Input() imageKeyboard:string= ""
 
   notes:string[] = ['C','D','E','F','G','A','B']
   constructor(private checker: AnswerCheckerService) { }

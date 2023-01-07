@@ -1,6 +1,6 @@
 <main>
     <div class="container-title">
-        <app-title text="Qual instrumento você deseja tocar?"></app-title>
+        <app-title text="Escolha o nível em que deseja jogar:"></app-title>
     </div>
     <div class="container-card">
         <app-card 
@@ -8,9 +8,11 @@
         value="300px" 
         image="../../../assets/img/Piano1.png"></app-card>
     </div> 
-    
-   
-        <app-btn text="Let's start!"> </app-btn>
+    <div class="container-botoes">
+        <app-btn flagHome="true" text="Nível 1" nivel="1"> </app-btn>
+        <app-btn flagHome="true" text="Nível 2" nivel="2"> </app-btn>
+    </div>
+        
 
 </main>
 

@@ -16,7 +16,6 @@ export class AnswerCheckerService {
       if (nota == valuePic)
       {
         this.acertos++
-        console.log(this.acertos)
       }
       
     }

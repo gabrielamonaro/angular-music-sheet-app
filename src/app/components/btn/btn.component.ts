@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import {RandomnessGeneratorService} from '../../service/randomness-generator.service'
 
 @Component({
   selector: 'app-btn',
@@ -7,10 +8,21 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class BtnComponent implements OnInit {
   @Input() text:string =''
-
-  constructor() { }
+  @Input() nivel:string=''
+  @Input() flagHome:string='true'
+ 
+  constructor(private service: RandomnessGeneratorService) { }
 
   ngOnInit(): void {
   }
+
+  setNivel(nivel:string){
+    if ( this.flagHome == "true"){
+        this.service.setNivel(nivel);
+     }
+     else{
+      this.nivel = this.service.getNivel();
+     }
+}
 
 }

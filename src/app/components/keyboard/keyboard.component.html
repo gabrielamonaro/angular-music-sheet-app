@@ -1,6 +1,6 @@
 <div class="keyboard"  valuePic="">
     
-    <ul class="teclas" id="lista-teclas" >
+    <ul class="teclas" id="lista-teclas" [ngStyle]="{'background-image': imageKeyboard}" >
         <li class="tecla" (click)="Check(note, valuePic)" [ngStyle]="{'height':height}" *ngFor="let note of notes"> <input  id="{{note}}" type="button"></li>
 
     </ul>

@@ -6,6 +6,8 @@ import {environment} from '../../environments/environment'
 })
 export class RandomnessGeneratorService {
 
+  nivel:string = '1';
+
   constructor() { }
   notes:string[] = environment.notes
   makeItRandom()
@@ -15,4 +17,20 @@ export class RandomnessGeneratorService {
     return value
   
   }
+  setNivel(value:string)
+  {
+    this.nivel = value;
+  }
+  getNivel()
+  {
+    return this.nivel;
+  }
+
+  getKeyboardUrl(){
+    const url = "url('../../../assets/img/nivel" + this.nivel + "/keyboard.png')"
+    console.log(url)
+    return url
+    
+  }
+
 }

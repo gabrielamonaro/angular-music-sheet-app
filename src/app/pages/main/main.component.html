@@ -5,11 +5,11 @@
         <app-card
         color="white"
         value="200px" 
-        image="../../../assets/img/{{note}}.png"></app-card>
+        image="../../../assets/img/nivel{{nivel}}/{{note}}.png"></app-card>
     </div>
 
     <div class="container-keyboard">
-        <app-keyboard (click)="newPic()" valuePic="{{note}}"></app-keyboard>
+        <app-keyboard (click)="newPic()" valuePic="{{note}}" imageKeyboard="{{keyboard}}"></app-keyboard>
     </div>
     <div class="container-points">
         <app-points pontos="{{acertos}}" restantes="{{qtde_restante}}"></app-points>
