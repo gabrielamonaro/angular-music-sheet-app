@@ -24,7 +24,7 @@ export class ResultsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    this.answers.setAcertos();
   }
 
 }
