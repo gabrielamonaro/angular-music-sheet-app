@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PointsComponent implements OnInit {
   @Input() pontos:string = '';
+  @Input() restantes:string ='';
   constructor() { }
 
   ngOnInit(): void {

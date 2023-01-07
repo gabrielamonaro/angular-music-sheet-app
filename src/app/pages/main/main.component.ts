@@ -1,6 +1,7 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import {RandomnessGeneratorService} from '../../service/randomness-generator.service'
 import {AnswerCheckerService} from '../../service/answer-checker.service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -10,7 +11,12 @@ import {AnswerCheckerService} from '../../service/answer-checker.service'
 export class MainComponent implements OnInit, OnChanges {
   @Input() note:string = ""
   @Input() acertos:number = 0;
-  constructor(private random: RandomnessGeneratorService, private checker:AnswerCheckerService) { }
+  qtde_restante:number = 10;
+  constructor(
+    private random: RandomnessGeneratorService, 
+    private checker:AnswerCheckerService,
+    private navegador: Router
+    ) { }
 
   ngOnInit(): void {
     this.newPic()
@@ -21,8 +27,15 @@ export class MainComponent implements OnInit, OnChanges {
   }
 
   newPic()
-  {
-    this.note = this.random.makeItRandom();
-    this.acertos = this.checker.getAcertos();
+  { if(this.qtde_restante>1)
+    {
+      this.note = this.random.makeItRandom();
+      this.acertos = this.checker.getAcertos();
+      this.qtde_restante--;
+    }
+    else{
+      this.navegador.navigate(['/result'])
+    }
+
   }
 }

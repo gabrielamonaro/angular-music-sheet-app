@@ -15,8 +15,16 @@
 main{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     height: 100vh;
     background-image: url('../../../assets/img/background-results.png');
     background-size: cover;
+}
+
+.container-title{
+    margin-bottom: 8%;
+}
+
+.container-botao{
+    margin-top: 8%;
 }
