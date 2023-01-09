@@ -1,8 +1,10 @@
 <div class="keyboard"  valuePic="">
     
     <ul class="teclas" id="lista-teclas" [ngStyle]="{'background-image': imageKeyboard}" >
-        <li class="tecla" (click)="Check(note, valuePic)" [ngStyle]="{'height':height}" *ngFor="let note of notes"> <input  id="{{note}}" type="button"></li>
+        <li class="tecla" (click)="Check(note, valuePic)"  [ngStyle]="{'height':height}" *ngFor="let note of notes"> <input   id="{{note}}" type="button"></li>
 
     </ul>
-    
+
+    <audio *ngFor="let track of notes" src="../../../assets/audios/{{track}}.mp3" id="audio-{{track}}"></audio>
+
 </div>

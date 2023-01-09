@@ -11,6 +11,7 @@ export class KeyboardComponent implements OnInit {
   @Input() valuePic:string=''
   @Input() imageKeyboard:string= ""
 
+
   notes:string[] = ['C','D','E','F','G','A','B']
   constructor(private checker: AnswerCheckerService) { }
 
@@ -26,7 +27,14 @@ export class KeyboardComponent implements OnInit {
 
   Check(note:string, valuePic:string){
     this.checker.check(note, this.valuePic)
+    this.playSounds(note)
   }
-
+  
+  playSounds(idElement: string)
+  {
+    const track = document.querySelector(`#audio-${idElement}`)?.attributes[1].value;  
+    const audio = new Audio(track)
+    audio.play();
+  }
 
 }
