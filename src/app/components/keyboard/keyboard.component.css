@@ -12,7 +12,7 @@
 }
 
 
-.teclas{
+.keys{
     border: 2px solid black;
     border-radius: 15px;
     display: flex;
@@ -24,25 +24,25 @@
 
 }
 
-.tecla{
+.key{
     width: 14.7%;
     font-size: 25px;
     list-style: none;
     border-radius: 15px;
 }
 
-.tecla input{
+.key input{
     box-shadow: none;
     background: none;
     border: none;
 }
 
-.tecla:hover{
+.key:hover{
     box-shadow: 0.1em 0.1em 0.5em #333;
     background: #8fbdd393;
 }
 
-.tecla:active{
+.key:active{
     position: relative;
     top: 1px;
 }

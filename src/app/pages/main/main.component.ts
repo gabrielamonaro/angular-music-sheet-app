@@ -23,7 +23,7 @@ export class MainComponent implements OnInit, OnChanges {
 
   ngOnInit(): void {
     this.newPic()
-    this.checker.setAcertos();
+    this.checker.setPoints();
     this.keyboard = this.random.getKeyboardUrl();
   }
 
@@ -36,7 +36,7 @@ export class MainComponent implements OnInit, OnChanges {
     {
       this.nivel = this.random.getNivel();
       this.note = this.random.makeItRandom();
-      this.acertos = this.checker.getAcertos();
+      this.acertos = this.checker.getPoints();
       this.qtde_restante--;
     }
     else{

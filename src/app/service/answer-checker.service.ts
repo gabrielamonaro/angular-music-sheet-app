@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class AnswerCheckerService {
 
-  acertos:number = 0;
+  points:number = 0;
 
   constructor( ) { }
 
@@ -15,19 +15,19 @@ export class AnswerCheckerService {
     
       if (nota == valuePic)
       {
-        this.acertos++
+        this.points++
       }
       
     }
     
 
-    getAcertos(){
-      return this.acertos;
+    getPoints(){
+      return this.points;
     }
 
-    setAcertos(){
-      this.acertos = 0;
-      return this.acertos;
+    setPoints(){
+      this.points = 0;
+      return this.points;
     }
 
 

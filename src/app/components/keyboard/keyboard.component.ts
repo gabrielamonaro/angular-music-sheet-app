@@ -16,9 +16,9 @@ export class KeyboardComponent implements OnInit {
   constructor(private checker: AnswerCheckerService) { }
 
   ngOnInit(): void {
-    const listaTeclas = document.querySelector('#lista-teclas');
+    const keysList = document.querySelector('#keys-list');
     
-    let value = window.getComputedStyle(listaTeclas!).width;
+    let value = window.getComputedStyle(keysList!).width;
     value = value.substring(0,value.length-2);
     let newHeight = Number(value)
     newHeight =  0.6*newHeight

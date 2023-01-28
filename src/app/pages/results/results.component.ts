@@ -8,23 +8,23 @@ import {AnswerCheckerService} from '../../service/answer-checker.service'
 })
 export class ResultsComponent implements OnInit {
   @Input() points:number = 0;
-  @Input() mensagem:string="Parabéns!"
+  @Input() message:string="Parabéns!"
   constructor(private answers: AnswerCheckerService) { 
-    this.points = this.answers.getAcertos()
+    this.points = this.answers.getPoints()
 
     if(this.points < 5 )
     {
-      this.mensagem = "Você ainda pode melhorar."
+      this.message = "Você ainda pode melhorar."
     }
     else if (this.points < 7)
     {
-      this.mensagem = "Legal, "
+      this.message = "Legal, "
     }
 
   }
 
   ngOnInit(): void {
-    this.answers.setAcertos();
+    this.answers.setPoints();
   }
 
 }
